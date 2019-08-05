@@ -47,6 +47,10 @@ enum
     MHASH_DUPL = HASHTABLE_LASTERR + 1,     // key already exists (duplicate keys)
 };
 
+#ifdef	__cplusplus
+extern "C" {
+#endif
+
 
 // create new hash object, return 0 if unsuccessful
 malloc_hash_t* mhash_create(void);
@@ -204,5 +208,8 @@ void mhash_walk(malloc_hash_t *hashtable, int (*fcn)(const hashentry_t*));
 // this function will resize hash table
 int mhash_resize(malloc_hash_t *hashtable);
 
+#ifdef	__cplusplus
+}
+#endif
 
 #endif // __MALLOC_HASH_H__

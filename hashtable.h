@@ -93,6 +93,10 @@ enum
 };
 
 
+#ifdef	__cplusplus
+extern "C" {
+#endif
+
 // One-at-a-Time Hash.
 // Taken from http://www.burtleburtle.net/bob/hash/doobs.html and lookup3.c,
 // by Bob Jenkins, May 2006, Public Domain.
@@ -211,5 +215,9 @@ void hashtable_copy(hashtable_t *old_hash, hashtable_t* new_hash);
 // increase because table size is still the same.
 void hashtable_add2pool(hashtable_t* hash, hashentry_t* pool, int pool_size);
 
+
+#ifdef	__cplusplus
+}
+#endif
 
 #endif // __HASHTABLE_H__
