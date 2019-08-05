@@ -1,4 +1,4 @@
-hashtable
+# hashtable
 Minimalistic hash table implementation in C. It does not require dynamic memory allocation, so it can be used on MCU.
 Hash table is table of void* vals with char* keys. Vals and keys are never copied.
 
